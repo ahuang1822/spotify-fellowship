@@ -8,10 +8,9 @@ For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 */
 
 
-
 function decodeString(s) {
-  let lettersAndNumbers = filterOutBrackets(s)
-  return decodeThis(lettersAndNumbers.slice(1), lettersAndNumbers[0])
+  let lettersAndNumbers = filterOutBrackets(s);
+  return decodeThis(lettersAndNumbers.slice(1), lettersAndNumbers[0]);
 }
 
 /* 
@@ -26,11 +25,11 @@ function filterOutBrackets (str) {
       possibleNumber += str[i];
     } else if (str[i] === '[' || str[i] === ']') {
       lettersAndNumbers.push(possibleNumber);
-      possibleNumber = ''
+      possibleNumber = '';
     } else {
       lettersAndNumbers.push(possibleNumber);
       lettersAndNumbers.push(str[i]);
-      possibleNumber = ''
+      possibleNumber = '';
     }
   }
   return lettersAndNumbers;

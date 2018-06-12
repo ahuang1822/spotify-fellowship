@@ -22,7 +22,8 @@ function sortByString(s,t) {
 
   /* 
   Loops over our string, t, and for each letter, add's it x number of times to our output string depending on 
-  the letter's key-pair value in the lettersInStringS hashmap */
+  the letter's key-pair value in the lettersInStringS hashmap 
+  */
   for (let j = 0; j < t.length; j++) {
     output += t[j].repeat(lettersInStringS[t[j]]);
   }

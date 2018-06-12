@@ -22,11 +22,11 @@ function changePossibilities(amount, denominations) {
     let denom = denominations[i];
     for (let currentAmount = 1; currentAmount < amounts.length; currentAmount++) {
       if (denom <= currentAmount) {
-        amounts[currentAmount] += amounts[currentAmount - denom]
+        amounts[currentAmount] += amounts[currentAmount - denom];
       }
     }
   }
-  return amounts[amount]
+  return amounts[amount];
 }
 
 console.log(changePossibilities(4, [1,2,3]))
